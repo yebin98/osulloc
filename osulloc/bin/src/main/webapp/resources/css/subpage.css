@@ -1,0 +1,334 @@
+@charset "utf-8";
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Gowun Dodum', sans-serif;
+}
+
+ul,li{
+    list-style: none;
+}
+
+img{
+    vertical-align: top;
+    border: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+@font-face{
+    font-family: 'S-Core Dream 2';
+    src: url('S-CoreDream-2ExtraLight.eot');
+    src: url('S-CoreDream-2ExtraLight.eot?#iefix') format('embedded-opentype'),
+         url('S-CoreDream-2ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BMJUA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#wrap{
+    min-width: 1240px;
+    background-color: #fff;
+}
+
+
+/* 본문 시작 */
+
+.container{
+
+    width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+
+    position: relative;
+
+}
+
+.container h1{
+
+    font-weight: 300;
+    text-align: center;
+    font-size: 50px;
+
+    box-sizing: border-box;
+    padding: 140px 50px 0 0;
+
+
+    font-family: 'Gowun Dodum', sans-serif;
+
+}
+
+.magazine1{
+    margin: 0 auto;
+    position: relative;
+
+}
+
+h2{
+
+    font-family: 'BMJUA';
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    color: #444;
+    width: 100%;
+    margin:30px 0;
+
+    line-height: 75px;
+
+}
+
+h2 span{
+    display: block;
+
+    background-image: url(../img/차잔\ 아이콘.png);
+    background-repeat: no-repeat;
+    background-size: 40px auto;
+    background-position: left 470px top 10px;
+
+}
+
+.box{
+
+    margin-bottom: 60px;
+}
+
+
+
+.box ul{
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    margin-bottom: 60px;
+   
+}
+
+
+.box ul li{
+   width: 300px;
+
+   padding: 25px 25px 0 25px;
+
+   background-color: #e2eee4;  
+
+    display: block;
+    margin-bottom: 25px;
+    text-decoration: none;
+    
+}
+
+
+.box ul li .screen{
+   overflow: hidden;
+   height: auto;
+}
+
+
+.box ul li img{
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  transition:transform 1s;
+
+  margin-bottom: 10px;
+}
+
+
+
+.box ul li .story{
+	
+   height : 30px; 
+   font-family: 'BMJUA';
+   font-size: 22px;
+   line-height : 25px;
+   font-weight: 500;
+   color: #444;
+
+   padding: 20px 15px;
+
+   text-align: center;
+
+
+}
+
+.box li .view:hover img{
+    transform:scale(1.2);
+}
+
+.modal{
+    width: 1150px;
+    height: 1500px;
+    
+   	text-align : center;
+   	font-size : 30px;
+   	margin : 0 auto;
+   	
+   	position : absolute;
+   	top :  100px;
+   	left : 70px;
+   	
+    /* background-color: rgb(240, 247, 237); */
+    background-color: rgb(248, 248, 248);
+    
+
+}
+
+
+
+
+.modal-content{
+	width : 100%;
+	height : 100%;
+	position : relative;
+}
+
+.modal-title{
+	
+	margin: 40px 0;
+}
+
+.modal-body{
+	height : 85%;
+	padding : 0 40px;
+	
+	line-height : 30px;
+}
+
+.modal-body::-webkit-scrollbar{ display:none; }
+
+
+.article-cont{
+	
+
+}
+
+.sticky-pad{
+	height : 100px;
+}
+
+.sticky-pad .article-header{
+	padding : 20px; 
+
+}
+
+.sticky-pad .article-header .add-on{
+
+}
+
+.sticky-pad .article-header h1{
+	font-size : 25px;
+	padding : 0;
+	padding-top : 20px;
+}
+
+.sticky-pad .article-header .article-share{
+	padding : 20px;
+}
+
+.article-wrap{
+	
+}
+
+.article-section{
+	/* height : 900px; */
+	
+	line-height : 45px;
+	padding : 20px 0;
+}
+
+.loca_magazine{
+	height : 200px;
+}
+
+.article-img{
+	width : 100%;
+
+    margin-bottom : 30px;
+}
+
+.article-img img{
+	width : 100%;
+	height: auto;
+}
+
+.article-section .h{
+	margin : 0;
+	height : 100px;
+	line-height : 100px;
+	
+/* 	padding-top : 35px ;
+	box-sizing : border-box; */
+	
+}
+
+.article-figure-cation{
+	
+	padding : 20px 0;
+}
+
+
+
+
+
+.modal-footer{
+	width : 100%;
+	
+	position : absolute;
+	bottom : 40px;
+	
+}
+
+
+.modal button{
+    width: 150px;
+    height: 50px;
+    margin: 40px auto;
+
+    display: block;
+
+    font-size: 40px;
+
+    background-color: rgb(209, 237, 217);
+    border:none;
+    border-radius : 10px;
+    cursor: pointer;
+}
+
+
+.pager{
+    position: absolute;
+    top: 520px;
+    left: 8px;
+}
+
+.pager p{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #b5d1b9;
+
+    margin-bottom: 25px;
+
+    text-indent: -9999px;
+}
+
+.pager .on{
+    background-color: #558f5f;
+}
+

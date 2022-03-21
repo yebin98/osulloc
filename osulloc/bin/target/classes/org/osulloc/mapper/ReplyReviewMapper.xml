@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="org.osulloc.mapper.ReplyReviewMapper">
+	<insert id="write">
+		insert into reviewreply( pno,reply,replyer)
+		values( #{pno},#{reply},#{replyer})
+	</insert>
+	<!-- select는 resulType이 있지만  insesrt는 0,1로 값이 이동한다. -->
+	
+	<select id="list" resultType="org.osulloc.domain.ReplyReviewDTO">
+	<!-- resultType="값을 보내고 받을 페키지+클래스경로" -->
+		select*from reviewreply where pno=#{pno}
+	</select>
+	<select id="detail" resultType="org.osulloc.domain.ReplyReviewDTO">
+		select*from reviewreply where rno=#{rno}
+	</select>
+	<update id="update">
+		update reviewreply 
+		set reply=#{reply}, replydate=now() 
+		where rno=#{rno} and pno=#{pno}
+	</update>
+	
+	<delete id="remove">
+		delete from reviewreply
+		where rno=#{rno} and pno=#{pno}
+	</delete>
+</mapper>

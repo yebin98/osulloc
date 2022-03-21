@@ -1,0 +1,307 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Gowun Dodum', sans-serif;
+    font-size: 13px;
+    line-height: 20px;
+    color: #333;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    vertical-align: top;
+    border: 0;
+}
+
+
+/* 본문 시작 */
+
+#container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.cart{
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 100px;
+
+}
+
+h2{
+    
+    text-align: center;
+    font-size: 25px;
+    line-height: 25px;
+
+    margin: 60px auto;
+}
+
+.cal{
+    width: 400px;
+
+    position: relative;
+
+    background-color: #fcf4eb;
+
+    border: 1px solid #d6cabd;
+    border-radius: 20px;
+
+}
+
+.pic1{
+    width: 100%;
+
+}
+
+
+.cInfo{
+
+   /*  text-align: center; */
+
+    margin-top: 100px;
+
+    padding: 50px 40px;
+    box-sizing: border-box;
+
+    margin-bottom: 100px;
+
+
+}
+
+.cInfo div{
+	width : 250px;
+	margin : 0 auto;
+	
+	text-align : left;
+}
+
+.cInfo p{
+    display: inline-block;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    color: #444;
+
+    padding-bottom: 30px;
+    box-sizing: border-box;
+
+
+
+}
+
+.cInfo input{
+
+    border: none;
+    background-color: #fcf4eb;
+
+
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+
+}
+
+/* .cInfo #other2{
+	margin-left : 10px;
+} */
+
+
+
+.btns{
+
+    text-align: center;
+    
+}
+
+.btns button{
+    width: 150px;
+    height: 40px;
+
+    background-color: rgb(232, 241, 237);
+    color: #333;
+    border-radius: 20px;
+    border: 1px solid #9ac4a1;
+
+}
+
+
+
+.commodity{
+    width: 750px;
+    
+}
+
+.commodity ul{
+    width: 100%;
+    height: 600px;
+    
+
+    display: flex;
+    justify-content: space-between;
+    
+    
+    padding : 20px 10px 0 10px;
+    box-sizing : border-box;
+    
+    flex-wrap: wrap;
+
+    margin-bottom: 10px;
+    
+    overflow-y : scroll;
+    
+}
+
+.commodity ul::-webkit-scrollbar {
+  /* 스크롤바 너비 조절하는 부분 */
+  width: 13px; 
+}
+.commodity ul::-webkit-scrollbar,
+.commodity ul::-webkit-scrollbar-thumb {
+  overflow:visible;
+  border-radius: 4px;
+
+}
+.commodity ul::-webkit-scrollbar-thumb {
+  background: rgb(232, 241, 237);
+  
+}
+
+
+.commodity li{
+    width: 212px;
+    height : 275px;
+
+    background-color: rgb(232, 241, 237);
+
+    margin: 0 9px 20px 9px;
+
+    position: relative;
+
+    border: 1px solid #9ac4a1;
+    border-radius: 10px;
+}
+
+.commodity li p input{
+    width: 50px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #444;
+    
+    border: none;
+    border-radius: 35px;
+    background-color: rgb(232, 241, 237);
+
+    margin-right: 5px;
+
+}
+
+.commodity .on, .commodity .on p input {
+
+    background-color: rgb(169, 212, 193);
+
+}
+
+
+li .pic2{
+
+    width: 100%;
+    height: auto;
+ 
+}
+
+.pic2 img{
+    width: 85%;
+    height: 200px;
+
+    margin-left: 15px;
+    /* object-position: 15px; */
+    /* background-color: rgb(127, 208, 255); */
+}
+
+.cart-num{
+    width: 40px;
+    height: 40px;
+
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+
+    box-sizing: border-box;
+    padding-top: 9px;
+
+    border-radius: 50%;
+
+    background-color: #eee3d5;;
+
+    position: absolute;
+    top: -15px;
+    left: -15px;
+}
+
+.cm{
+    font-size: 18px;
+    font-weight: bold;
+    color: #444;
+
+    text-align: center;
+
+    margin-bottom: 10px;
+
+
+}
+
+
+.more{
+
+    font-size: 20px;
+    font-weight: bold;
+
+    text-align: center;
+
+    background-color: #fcf4eb;
+
+    padding: 10px 0;
+    box-sizing: border-box;
+
+    border: 1px solid #d6cabd;
+    border-radius: 20px;
+
+}
+
+
+
+
+/* .tea{
+    display: block;
+
+    width: 159px;
+    height: 112px;
+
+    background-image: url(../img/찻잔2.png);
+    background-size: 100% auto;
+    background-position: -36px -100px;
+    background-repeat: no-repeat; 
+
+    text-indent: -99999px;
+
+    background-color: rgb(129, 166, 199);
+
+} */

@@ -1,0 +1,282 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Gowun Dodum', sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    color: #333;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color : black;
+}
+
+img{
+    vertical-align: top;
+    border: 0;
+}
+
+.wrap{
+    min-width: 1240px;
+}
+
+.header{
+    width: 100%;
+    height: 185px;
+    background-color: rgb(232, 241, 237);
+}
+
+.headerIn{
+    position: relative;
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.logo a{
+    display: block;
+    width: 160px;
+    height: 160px;
+    background-image: url(../img/오설록\ 로고.png);
+    background-position: left -120px top -90px;
+    background-repeat: no-repeat;
+    background-size: 240% ;
+    text-indent: -999999px;
+}
+
+.welcome{
+	height : 30px;
+	display : flex;
+	
+}
+
+.welcome p{
+	line-height : 30px;
+	display : flex;
+	
+}
+
+
+.member{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.member ul{
+    display: flex;
+
+
+}
+
+.member li{
+    margin-left: 20px;
+    
+    text-align : left;
+}
+
+.member li a{
+    font-size:22px;
+    line-height: 30px;
+    font-weight: 500;
+    color: #222;
+}
+
+.member li a:hover{
+    color: rgb(78, 156, 78);
+    font-weight: bolder;
+}
+
+.search{
+    display: flex;
+}
+
+.search input{
+    position: absolute;
+    top: 90px;
+    right: 0;
+    width: 250px;
+    height: 30px;
+    padding: 3px 13px;
+    font-size: 17px;
+    font-weight: 700;
+    border: 2px solid #9ac4a1;
+    border-radius: 20px;
+    background-color: #e7f1e9;
+}
+
+.search a{
+    display: block;
+    position: absolute;
+    top: 95px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/icon_search1.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center ;
+    text-indent: -99999px;
+}
+
+.welcom{
+   position:relative;
+   
+}
+
+
+.gnb{
+	width:100%;
+    position: absolute;
+    top:135px;
+    left: 0;
+    background-color: rgb(232, 241, 237);
+    height: 50px;
+    margin: 0 auto;
+}
+
+.gnb-in{
+    width: 1240px;
+    margin: 0 auto;
+}
+
+.gnb-in>ul{
+	position:absolute;
+	top:-30px;
+	left:200px;
+	display: flex;
+    margin: 0 auto;
+}
+
+.gnb-in>ul>li{
+    position: relative;
+    
+}
+
+.gnb-in>ul>li>a{
+    display: block;
+    margin-right: 60px;
+    line-height: 50px;
+    color: #333;
+    font-size: 22px;
+}
+
+.gnb .menus{
+    position: absolute;
+    top: 50px;
+    left: -30px;
+/*     background-color:  rgb(232, 241, 237); */
+    width: 100%;
+    height: 210px;
+    font-size: 18px;
+    line-height: 25px;
+    z-index: 10;
+    /* display: none; */
+    
+    text-align : center;
+
+    
+}
+
+.gnb .menus li{
+
+    
+    padding : 3px 0;
+    
+}
+
+.gnb .menus a{
+    color:  rgb(54, 102, 81);
+    font-weight : bold;
+}
+
+.gnbBg{
+    position: absolute;
+    top: 180px;
+    left:0px;
+    background-color: rgb(232, 241, 237);
+    width: 100%;
+    height: 210px;
+    z-index: 1;
+    /* display: none; */
+}
+
+/* .gnb{
+    position: absolute;
+    bottom: 20px;
+    left: 190px;
+}
+
+.gnb ul{
+    display: flex;
+}
+
+.gnb li{
+	width:100px;
+    margin-right: 20px;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 40px;
+    text-align: center;
+}
+
+.gnb li a{
+   
+    color: #222;
+}
+
+.gnb li a:hover{
+    color: rgb(78, 156, 78);
+    font-weight: bolder;
+} */
+
+/* .menus{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(232, 241, 237);
+    z-index: 10000;
+    
+    padding-left : 230px;
+    box-sizing : border-box;
+    
+}
+
+.menus div{
+
+	width : 90px;
+	margin-right : 28px;
+	
+    
+    
+}
+
+.menus ul{
+	width : 100%;
+    display: block;
+    margin-right: 110px;
+    
+}
+
+.menus li{
+	width : 100%;
+    display: block;
+    padding: 30px 0;
+    
+    margin-right: 60px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 40px;
+	
+	text-align: center;
+    
+} */

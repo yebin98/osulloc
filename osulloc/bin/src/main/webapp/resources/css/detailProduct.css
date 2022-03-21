@@ -1,0 +1,568 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Gowun Dodum', sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    color: #333;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    vertical-align: top;
+    border: 0;
+}
+
+.wrap{
+    min-width: 1240px;
+    background-color: #fff;
+}
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+.product{
+    display: flex;
+    margin-bottom: 60px;
+}
+
+.left_detail{
+    margin-right: 50px;
+}
+
+.left_i{
+    width: 500px;
+    height: 500px;
+    background-color: rgb(248, 248, 248);
+    margin-bottom: 30px;
+}
+
+.left_i img{
+    display:block;
+    width: 100%;
+    height: auto;
+}
+
+.left_r{
+    position: relative;
+    /* text-align: right; */
+}
+
+.left_r a{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    color: #333;
+}
+
+.left_r p{
+    display: block;
+}
+
+.left_r .review::after{
+    content: ' ';
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -6px;
+    width: 10px;
+    height: 14px;
+    color: #333;
+}
+
+.right_detail{
+	width: 620px;
+}
+
+.detail_t{
+    margin-bottom: 30px;
+}
+
+.detail_t .detail_t_name{
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 5px;
+}
+
+.detail_t .detail_t_write{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.detail_t .detail_t_price{
+    text-align: right;
+    text-decoration: line-through;
+    color: #aaa;
+    margin-bottom: 5px;
+}
+
+.detail_t .detail_t_discount{
+    text-align: right;
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.detail_c{
+    background-color: rgb(248, 248, 248);
+    padding: 10px;
+    margin-bottom: 80px;
+    border: 1px solid #ccc;
+}
+
+.detail_c .detail_buy{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 5px;
+}
+
+.detail_buy .b_num{
+    display: flex;
+    font-size: 30px;
+}
+
+.b_num #plus, #minus{
+	cursor: pointer;
+}
+
+.b_num #num{
+	width: 30px;
+    padding: 0 4px;
+    border: none;
+    background: transparent;
+    font-size: 25px;
+    text-align: center;
+}
+
+.detail_c .shopping_bag{
+    width: 100%;
+    padding: 15px 5px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    border: 1px solid #ccc;
+}
+
+.detail_c .packaging{
+    width: 100%;
+    padding: 15px 5px;
+    font-size: 20px;
+    border: 1px solid #ccc;
+}
+
+.detail_b .total_b{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 90px;
+}
+
+.detail_b .total{
+    font-size: 40px;
+}
+
+.detail_b .button_b{
+    text-align: right;
+}
+
+.button_b button{
+    background-color: transparent;
+}
+
+.button_b #cart{
+    width: 150px;
+    height: 60px;
+    
+    background-color: rgb(248, 248, 248);
+    border: 1px solid #ccc;
+}
+
+.button_b #buy{
+    width: 250px;
+    height: 60px;
+    
+    background-color: rgb(248, 248, 248);
+    border: 1px solid #ccc;
+}
+
+.button_b .btn{
+    display:block;
+    width: 100%;
+    height: 100%;
+    color: #333;
+    
+}
+
+.btn span{
+    line-height: 55px;
+    font-size: 20px;
+}
+
+/* .container #reviewD{
+	background-color: aqua;
+} */
+
+.reviewDS{
+	padding: 50px 0;
+	text-align: center;
+	font-size: 30px;
+}
+
+.reviewW{
+	text-align: end;
+	margin-right:30px;
+	color: #333;
+}
+
+/* #reviewD ul{
+	margin: 0 20px;
+} */
+
+#reviewD li{
+	margin: 20px;
+}
+
+#reviewD #r_detail{
+	display: flex;
+	align-items: center;
+	
+}
+
+#r_detail .uploadResult{
+	width: 200px;
+	height: 200px;
+	
+
+}
+
+.uploadResult{
+	padding-bottom : 40px;
+	
+}
+
+.uploadResult img{
+	display: block;
+	width: 100%;
+	
+	
+
+}
+
+.detail_right{
+	width: 950px;
+	
+	background-color: rgb(248, 248, 248);
+    border: 1px solid #ccc;
+    
+    position : relative;
+}
+
+.detail_right p{
+	
+	height : 40px;
+
+	margin : 12px 0 ;
+	padding: 7px 10px;
+	box-sizing : border-box;
+	
+
+}
+
+.detail_right_writer{
+	font-size : 20Spx;
+	
+}
+
+.detail_right_regdate{
+	font-size : 20px;
+	
+	position : absolute;
+	top : 0;
+	right : 20px;
+}
+
+.detail_right_title{
+	font-weight: bold;
+}
+
+.detail_right_content{
+	font-size : 25px;
+}
+
+.detail_right_more{
+	position : absolute;
+	top : 15px;
+	right : 10px;
+}
+
+.more{
+	position : absolute;
+	top : 50px;
+	right : 10px;
+}
+
+.more a{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+/* .replyList{
+	margin-bottom: 20px;
+	width : 1200px;
+	background-color : #9ac4a1;
+} */
+
+.mrebtn{  
+	width: 80px;
+    height: 35px;
+    
+    text-align : center;
+    line-height : 3px;
+
+/*     background-color: rgb(232, 241, 237);
+    border: 1px solid #9ac4a1; */
+    
+    background-color: rgb(248, 248, 248);
+    border: 1px solid #ccc; 
+    border-radius: 20px;
+    color: #333;
+    
+	margin : 10px 30px 0 30px;
+	
+}
+
+.rebtn{  
+	width: 60px;
+    height: 30px;
+    
+    text-align : center;
+    line-height : 3px;
+
+    background-color: rgb(248, 248, 248);
+    border: 1px solid #ccc; 
+    border-radius: 20px;
+    color: #333;
+    
+	
+}
+
+
+/* .rewrite{
+	
+} */
+
+.relist{
+	margin-bottom : 40px;
+}
+
+.relist_in{
+	margin-bottom : 15px;
+	
+    background-color: rgb(248, 248, 248);
+    border: 1px solid #ccc;
+}
+
+
+.listReplyer{
+	height : 12px;
+	line-height : 12px;
+		
+	background-color: rgb(248, 248, 248);
+    border-bottom: 1px solid #ccc;
+	
+	padding : 10px 10px;
+
+}
+
+.listReplyer b{
+	font-size : 16px;
+
+}
+
+.listReply{
+	background-color: rgb(240, 240, 240);
+	line-height : 100%;
+	
+	padding : 20px 10px;
+	box-sizing : border-box;
+	
+	position: relative;
+	
+
+}
+
+.listReply button{
+	display : block;
+
+    text-align : center;
+	font-size : 12px;
+	line-height : 100%;
+
+/*     background-color: rgb(232, 241, 237);
+    border-radius: 20px;
+    border: 1px solid #9ac4a1; */
+    
+    width: 60px;
+    height: 30px;
+
+    background-color: rgb(248, 248, 248);
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    color: #333;
+
+	position: absolute;
+	top : 10px;
+	right : 20px;
+
+}
+
+.rewrite{
+	width : 1200px;
+	padding : 0 20px;
+
+}
+
+.rewrite h4{
+	font-size : 20px;
+	margin-bottom : 10px;
+}
+
+.replyBox_replyer, .replyBox_reply{
+	margin-bottom : 10px;
+	font-size : 16px;
+	
+}
+
+.replyBox_replyer input, .replyBox_reply textarea{
+	width : 1120px;
+	/* border: 1px solid rgb(178, 199, 183); */
+	 border: 1px solid #ccc; 
+	
+	
+
+
+    
+    margin-top : 5px;
+	
+}
+
+.replyBox_replyer input{
+	height : 20px;
+}
+
+.replyBox_reply textarea{
+	height : 80px;
+}
+
+/* 페이지 넘기는 곳 */
+.page{
+
+  margin: 60px auto;
+
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.pagination{
+
+	margin : 0 auto;
+ 	text-align: center;
+	display : flex;
+
+}
+
+.pageL, .pageR{
+  display: flex;
+  
+  width: 40px;
+  height: 40px;
+  margin: 0 5px 0 5px;
+  /* text-align: center; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 20px 0px 20px 0px;
+
+  background-color: rgb(199, 185, 145);
+}
+
+.next{
+  width: 40px;
+  height: 40px;
+  text-align: center;
+
+  background-color: darkgrey;
+}
+
+.moreNext{
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  background-color: rgb(226, 219, 219);
+}
+
+.pageC{
+  display: flex;
+}
+
+.pageC .PNum{
+  width: 40px;
+  height: 40px;
+  margin: 0 5px 0 5px;
+  /* text-align: center; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 20px 0px 20px 0px;
+  
+
+   background-color: rgb(232, 241, 237);
+   border: 1px solid #ccc; 
+
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

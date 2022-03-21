@@ -1,0 +1,144 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Gowun Dodum', sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    color: #333;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    vertical-align: top;
+    border: 0;
+}
+
+.wrap{
+    min-width: 1240px;
+    margin: 0 auto;
+}
+
+.container{
+	position: relative;
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.titleW{
+	margin: 30px 10px;
+	
+	text-align: center;
+    font-size: 25px;
+    line-height: 25px;
+
+    margin-bottom: 60px;
+}
+
+.modifyBtn button{
+	width: 100px;
+    height: 40px;
+    
+    text-align : center;
+    line-height : 40px;
+
+    background-color: rgb(232, 241, 237);
+    color: #333;
+    border-radius: 20px;
+    border: 1px solid #9ac4a1;
+		
+    cursor: pointer;
+	
+}
+
+.modifyBtn input{
+
+    background-color: rgb(232, 241, 237);
+    border: none;
+		
+}
+
+
+.write{
+	position: absolute;
+	bottom: 50px;
+	right: 0px;
+	width: 100px;
+	height: 50px;
+
+}
+
+.list{
+	position: absolute;
+	bottom: 50px;
+	right: 120px;
+	width: 100px;
+	height: 50px;
+	
+	text-align: center;
+	line-height: 50px;
+	color: #333;
+}
+
+.title{
+	width : 100%;
+	height: 40px;
+	margin-bottom: 10px;
+	padding: 3px 10px;
+	
+	border: 1px solid rgb(178, 199, 183);
+}
+
+.content{
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 30px;
+	
+	border: 1px solid rgb(178, 199, 183);
+}
+
+.file{
+	margin-bottom: 50px;
+
+}
+
+.file input{
+	margin-bottom: 50px;
+
+}
+
+#uploadResult li{
+	position: relative;
+}
+
+#uploadResult li .btn{
+	position:absolute;
+	top:20px;
+	left:80px;
+	width: 20px;
+	height: 20px;
+	background-color: rgb(177, 223, 177);;
+	border: none;
+	
+}
+
+.btn span{
+	width: 30px;
+	height: 30px;
+	color: #fff;
+}
+
+
+
+
+

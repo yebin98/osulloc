@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="org.osulloc.mapper.ProductReviewMapper">
+
+	<insert id="write">
+  		insert into productreview(prodnum, writer,title,content)
+		value(#{prodnum}, #{writer},#{title},#{content})
+  	</insert>
+  	
+  	<insert id="insertSelectKey" >
+  		<selectKey keyProperty="pno" order="BEFORE" resultType="int">
+  			<!-- select max(pno)+1 pno from productreview -->
+  			<!-- select ifnull ( pno, 0 ) from productreview --> 
+  			select ifnull (MAX(pno), 0 )+1 from productreview
+  		</selectKey>
+  		insert into productreview(prodnum,pno,title,content,writer)
+		value(#{prodnum}, #{pno},#{title},#{content},#{writer})
+  	</insert>
+  	
+  	<select id="productcri" resultType="org.osulloc.domain.ProductReviewDTO">
+  		 select * from(
+				select @rownum:=@rownum+1 as rownum, b.*
+				from (select @rownum:=0) as tmp, productreview as b order by pno desc
+				) as productlist 
+		<![CDATA[ 
+			where rownum > (#{pageNum}-1)*#{amount} 
+			and rownum <= #{pageNum}*#{amount} 
+		]]> 
+  	</select>
+
+  	<select id="getTotalCount" resultType="int">
+  		select count(*) from productreview
+  	</select>
+  	
+  	<select id="productreview" resultType="org.osulloc.domain.ProductReviewDTO">
+  		select*from productreview where pno=#{pno}
+  	</select>
+  	
+  	<update id="modify">
+  		update productreview
+		set title=#{title}, 
+			content=#{content}, 
+			regdate=now()
+		where pno=#{pno} and prodnum=#{prodnum}
+  	</update>
+  	
+  	<delete id="delete">
+  		delete from productreview where pno=#{pno}
+  	</delete>
+  	
+</mapper>
