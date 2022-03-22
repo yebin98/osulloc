@@ -14,7 +14,7 @@ $(document).ready(function(){
 					str+="data-uuid='"+obj.uuid+"'data-filename='"+obj.fileName+"'data-type='"+obj.image+"'>"; 
 					str+="<a href='/osulloc/download?fileName="+fileCallPath+"'>"+obj.fileName+"</a></li>"
 				}else{
-					var fileCallPath = encodeURIComponent(obj.uploadPath+"/s_"+obj.uuid+"_"+obj.fileName);
+					var fileCallPath = encodeURIComponent(obj.uploadPath+"/"+obj.uuid+"_"+obj.fileName);
 					console.log(fileCallPath)
 					//img태그를 사용해서 웹브라우저 이미지 출력
 					str+="<li data-path='"+obj.uploadPath+"'";

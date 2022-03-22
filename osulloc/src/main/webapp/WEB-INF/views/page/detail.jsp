@@ -48,12 +48,13 @@
                 </div>
                 
                 <div class="bbc_container">
+                	<div id="uploadResult">
+				   		<ul></ul>
+				   	</div>
                     <p>${detail.content}</p>
                 </div><!--본문_본문_본문-->
                 
-               	<div id="uploadResult">
-			   		<ul></ul>
-			   	</div>
+               	
 			   
                 <div class="board_btn">
                     <a href="/osulloc/page/noticeBoard" class="b_btn">목록</a>
@@ -62,10 +63,10 @@
       					<div class="write">
       						<a href="/osulloc/page/write"  class="page-link b_btn">글쓰기</a>
       					</div>
+      					<a href="/osulloc/page/modify?bno=${detail.bno}">수정</a>
+			    		<a href="/osulloc/page/remove?bno=${detail.bno}">삭제</a>
                		</c:if>
                		
-					<a href="/osulloc/page/modify?bno=${detail.bno}">수정</a>
-			    	<a href="/osulloc/page/remove?bno=${detail.bno}">삭제</a>
                 </div><!--본문_본문_푸터-->
             </div><!--본문_본문-->
             

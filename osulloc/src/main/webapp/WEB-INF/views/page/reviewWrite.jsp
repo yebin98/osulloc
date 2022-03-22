@@ -33,7 +33,7 @@
 				    </div>
 		       	</div>
 		       	<div class = "writeBtn">
-			    	<button class="write" type="submit">글쓰기</button>
+			    	<button class="write" type="submit">리뷰쓰기</button>
 			    	<button class="list">
 			    		<a href="/osulloc/page/detailProduct?prodnum=${productse.prodnum}">목록으로</a>
 			    	</button>

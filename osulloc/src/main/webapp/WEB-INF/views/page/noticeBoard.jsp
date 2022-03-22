@@ -55,9 +55,6 @@
               
               <div class="conTop">
                     <p class="totalCon"> <input type="text" value="0"> 개의 글</p>
-
-                    <p class="blind"><input type="checkbox"></input> 공지 숨기기</p>
-
                </div>
 			</form>
 		
@@ -67,38 +64,36 @@
 			
 			      <tr>
 			        <td class="contents">
-			          <p class="bno ">번호</p>
+			          <p class="bno">번호</p>
 			          <p class="title">제목</p>
 			          <p class="writer">작성자</p>
 			          <p class="regdate">등록일</p>
 			          <p class="cnt">조회수</p>
-			          <p class="good">좋아요</p>
+			          <!-- <p class="good">좋아요</p> -->
 			        </td>
 			      </tr>
 			      
 			      <c:forEach items="${list}" var="board">
 			
-			       <tr>
-			         <td class="contents">
-			           <p class="bno"><a href="/osulloc/page/detail?bno=${board.bno}">${board.bno}</a></p>
-			           <p class="title"><a href="/osulloc/page/detail?bno=${board.bno}">${board.title}</a></p>
-			           <p class="writer">${board.writer}</p>
-			           <p class="regdate">${board.regdate}</p>
-			           <p class="cnt">${board.cnt}</p>
-			           <p class="good">${board.good}</p>
-			         </td>
-			       </tr>
-			   </c:forEach>
+				       <tr>
+				         <td class="contents">
+				           <p class="bno"><a href="/osulloc/page/detail?bno=${board.bno}">${board.bno}</a></p>
+				           <p class="title title_c"><a href="/osulloc/page/detail?bno=${board.bno}">${board.title}</a></p>
+				           <p class="writer">${board.writer}</p>
+				           <p class="regdate">${board.regdate}</p>
+				           <p class="cnt">${board.cnt}</p>
+				          <%--  <p class="good">${board.good}</p> --%>
+				         </td>
+				       </tr>
+				   </c:forEach>
 			    </th>
 			</table>
 			
 			
 			<c:if test="${login!=null}">
-			           <button class="writeB">
-			
+	           <button class="writeB">
 					<a href="/osulloc/page/write"  class="page-link b_write">글쓰기</a>
-			
-			</button>
+				</button>
 			</c:if>
 			
 			            

@@ -22,10 +22,10 @@
 	<%@ include file="../Header&Footer/header.jsp" %>
 	<div class="wrap">
 		<div class="container">
-			<h1 class="titleW">게시판 글쓰기</h1>
+			<h1 class="titleW">공지사항 글쓰기</h1>
 			<form action="/osulloc/page/write" method="post" role="form">
 			
-				<input type="hidden" name = "writer" value="${login.id}">
+				<input type="hidden" name = "writer" value="${login.name}">
 				
 				<div class = "modifyBtn">
 			    	<button class="write"><input type="submit"value="글쓰기" ></button>

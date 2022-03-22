@@ -294,10 +294,13 @@ img{
 }
 
 .detail_right_more{
-	position : absolute;
-	top : 15px;
-	right : 10px;
-	cursor: pointer;
+	position: absolute;
+    top: 15px;
+    right: 10px;
+    background: transparent;
+    border: 1px solid #888;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 .more{
@@ -431,10 +434,12 @@ img{
 }
 
 .replyBox_replyer input{
+	padding: 3px 10px;
 	height : 20px;
 }
 
 .replyBox_reply textarea{
+	padding: 10px;
 	height : 80px;
 }
 

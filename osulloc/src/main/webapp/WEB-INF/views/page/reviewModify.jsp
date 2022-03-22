@@ -21,7 +21,7 @@
 	<%@ include file="../Header&Footer/header.jsp" %>
 	<div class="wrap">
 		<div class="container">
-			<h1 class="titleW">수정</h1>
+			<h1 class="titleW">리뷰 수정</h1>
 			<form action="/osulloc/page/reviewModify" method="post" role="form">
 				<input type="hidden" name="prodnum" value="${productse.prodnum}">
 				<input type="hidden" name="writer" value="${login.id}">

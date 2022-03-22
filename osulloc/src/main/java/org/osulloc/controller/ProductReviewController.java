@@ -57,6 +57,9 @@ public class ProductReviewController {
 
 		
 		//¸®ºä
+		int pagenum = cri.getPageNum();
+		
+		cri = new Criteria(pagenum,5);
 		
 		System.out.println("prodnum=" + pservice.productcri(cri));
 		model.addAttribute("productcri", pservice.productcri(cri));

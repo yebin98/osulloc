@@ -196,7 +196,7 @@ $(document).ready(function(){
 			for(var i=0; i<list.length; i++){		
 				
 				str+= "<li class = 'relist_in' data-rno='"+list[i].rno+"'><div style='display : none'><b>" + list[i].rno + "</b></div><div class = 'listReplyer'><b>" + list[i].replyer + "</b></div>" 
-				str+= "<div class = 'listReply'><div>" + list[i].reply + "</div><button type='button' id='menu' data-rno='"+list[i].rno+"' data-pno='"+list[i].pno+"' >select</button></div>"
+				str+= "<div class = 'listReply'><div>" + list[i].reply + "</div><button type='button' id='menu' data-rno='"+list[i].rno+"' data-pno='"+list[i].pno+"' >수정</button></div>"
 				str+= "</li>"	
 			}
 			

@@ -76,11 +76,11 @@ img{
 .bcc_header{
 	display:flex;
 	justify-content : space-between;
-	
+	border-bottom: 1px solid #bbb;
 	width: 100%;
 	height : 80px;
     padding: 5px 0;
-    
+    margin-bottom: 30px;
     background-color: rgb(252, 244, 235);	
 }
 
@@ -136,14 +136,15 @@ img{
 
 .bbc_container{
     width: 100%;
-    height: 300px;
+    height: auto;
     margin-bottom: 30px;
-    border-top: 1px solid #bbb;
+    /* border-top: 1px solid #bbb; */
     border-bottom: 1px solid #bbb;
 }
 
 .bbc_container p{
     margin: 20px 16px;
+    line-height: 30px;
 }
 
 
@@ -151,13 +152,15 @@ img{
 	visibility: hidden;
 }
 
-
+#uploadResult li{
+	text-align: center;
+}
 
 #uploadResult li img{
 	margin-bottom: 10px;
 	
 }
- 
+
 .board_btn{
     position: relative;
     margin-bottom: 20px;
@@ -196,11 +199,6 @@ img{
 
 .bc_footer{
     padding: 50px 0;
-}
-
-.bc_footer ul{
-    border-top: 1px solid #bbb;
-    border-bottom: 1px solid #bbb;
 }
 
 .bc_footer li{

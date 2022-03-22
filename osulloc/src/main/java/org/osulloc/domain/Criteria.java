@@ -6,11 +6,11 @@ public class Criteria {
 	private String keyword;//검색키워드
 	
 	//기본생성자
-	Criteria(){
+	public Criteria(){
 		this(1,10);//1페이지에 10개
 	}
 	//생성자 호출
-	Criteria(int pageNum, int amount){
+	public Criteria(int pageNum, int amount){
 		this.pageNum=pageNum;
 		this.amount=amount;
 	}

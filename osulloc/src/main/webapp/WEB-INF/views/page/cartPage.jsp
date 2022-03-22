@@ -54,7 +54,7 @@
                         	배송비 =1000
                         </p><br>
 
-						<p>장바구니 금액 = </p><input type="text" id="cartPrice" value="0" style="width : 70px">
+						<p>총 금액 = </p><input type="text" id="cartPrice" value="0" style="width : 70px">
 						
                     </div>
 

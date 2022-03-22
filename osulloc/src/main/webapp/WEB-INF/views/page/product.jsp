@@ -27,7 +27,7 @@
 <div class="wrap">
 	<div>&nbsp;</div>
 		<div id =titile> 
-			<h3>쇼핑몰 상품 등록</h3>
+			<h3>상품 등록</h3>
 		</div><!--#title -->
 		
 	    <div class="uploadDiv">

@@ -11,7 +11,7 @@
 			        	<ul>       	               
 							<div class="welcome">
 			               		<c:if test="${login != null }">
-									<p>${login.id}님 환영 합니다.</p>
+									<p>${login.name}님 환영 합니다.</p>
 									<li><a id="logout" onclick="location.href='/osulloc/member/logout'" >로그아웃</a></li>
 								</c:if>
 								<c:if test="${login == null}"><li><a href="/osulloc/member/login">로그인</a></li></c:if>
