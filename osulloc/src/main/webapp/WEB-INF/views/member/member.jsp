@@ -33,7 +33,7 @@
     
                     <h3>아이디</h3>
                     <span class="signup-input">
-                        <input id="signup-id" type="text" name="id"  placeholder="아이디(영문 또는 숫자)"></input>
+                        <input id="signup-id" type="text" name="id"  placeholder="아이디(영문 +숫자)"></input>
                        
                     </span>
                     <span class="final_id_ck">아이디를 입력해주세요.</span>
@@ -41,7 +41,7 @@
     
                     <h3>비밀번호</h3>
                     <span class="signup-input">
-                        <input id="signup-pw"  type="password"  class ="password" name="password"  placeholder="비밀번호(영문 소문자.숫자 조합)"></input>
+                        <input id="signup-pw"  type="password"  class ="password" name="password"  placeholder="비밀번호(영문+숫자+특수문자 조합)"></input>
                         <span class="pw-lock"></span>
                     </span>
     				<span class="final_pw_ck">비밀번호를 입력해주세요.</span>

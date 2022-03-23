@@ -111,7 +111,7 @@
 			                <option value="세트">세트</option>
 			            </select>
 			            
-			            <div class="checkbox" >
+			            <!-- <div class="checkbox" >
 			                <div class="color">
 			                    <input type="checkbox" name="color" id="red" value="red">
 			                    <label for="red" class="color_red"></label>
@@ -140,7 +140,7 @@
 			                    <input type="checkbox" name="color" id="black" value="black">
 			                    <label for="black" class="color_black"></label>
 			                </div>
-			            </div>
+			            </div> -->
 
 			            <div><input type="submit" value="검색" id="proSubmit"></div>
 

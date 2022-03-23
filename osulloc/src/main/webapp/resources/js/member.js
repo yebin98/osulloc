@@ -190,7 +190,7 @@ $(document).ready(function(){
     $("#signup-id").blur(function(){
     	
         if( !idReg.test( $("input[name=id]").val())) {
-           $('.id-correct').text("아이디는 영문자로 시작하는 6~20자 영문자 또는 숫자이어야 합니다.");
+           $('.id-correct').text("아이디는 6~20자 영문+숫자이어야 합니다.");
            $('.id-correct').css('color','red')
            $(this).focus();
            

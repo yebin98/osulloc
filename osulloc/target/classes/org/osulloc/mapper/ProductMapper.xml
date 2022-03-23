@@ -10,11 +10,10 @@
   		  select prodnum, name, petc, kind, scent, type, color, price, sale, number, concat(replace(uploadpath,'\\','/'),'/s_',uuid,'_',filename) as filename from product
 			<choose>
 				<when test="kind != null and scent != null and type != null">
-					 where  kind = #{kind}
-					 and scent = #{scent}
-					 and type = #{type}
+					 where kind = #{kind}
+					 or scent = #{scent}
+					 or type = #{type}
 				</when>
-
 			</choose>
   	</select>
   	
@@ -27,13 +26,13 @@
 
   	
   	<select id="product3se" resultType="org.osulloc.domain.ProductDTO">
-  		 select * from cart 
+  		 select * from cart order by cartnum desc
   	</select>
   	
   	<insert id="product3in">
   	
 	  	insert into cart (prodnum, name, sale, number,filename)
-		values (#{prodnum}, #{name}, #{sale}, #{number},#{filename});
+		values (#{prodnum}, #{name}, #{sale}, #{number},#{filename})
   		 
   	</insert>
   	

@@ -23,7 +23,7 @@
 			<h1 class="titleW">상품 리뷰</h1>
 			<form action="/osulloc/page/reviewWrite" method="post" role="form">
 				<input type="hidden" name="prodnum" value="${productse.prodnum}">
-				<input type="hidden" name = "writer" value="${login.id}">
+				<input type="hidden" name = "writer" value="${login.name}">
 				<div>
 				    <div>
 				        <input type="text" name="title" class="title" placeholder="제목을 입력해 주세요">

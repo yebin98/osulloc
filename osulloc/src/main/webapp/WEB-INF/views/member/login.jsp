@@ -34,7 +34,7 @@
 		 	  
            <input name ="id"  type="text" id="loginid" placeholder="아이디 입력"> 
            
-           <input name="password" type="password" id="loginpw"  placeholder="비밀번호 입력(영문,숫자 조합)">
+           <input name="password" type="password" id="loginpw"  placeholder="비밀번호 입력">
             
            <input type="submit" class="btn btn-primary" value="Login" id="dologin">
             

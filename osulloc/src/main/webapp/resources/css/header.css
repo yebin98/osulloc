@@ -85,6 +85,7 @@ img{
     font-size:22px;
     line-height: 30px;
     font-weight: 500;
+    cursor: pointer;
     color: #222;
 }
 
