@@ -1,5 +1,4 @@
 $(document).ready(function(){
-
 	// 서버에서 설정해 놓은 파일크기 설정
 	let maxSize=5242880;//5MB
 	// 서버에서 허용 불가능한 확장자 설정(정규식) : 규칙(파일 검증)
@@ -23,7 +22,6 @@ $(document).ready(function(){
 	//글쓰기 버튼을 클릭하면
 	$("input[type='submit']").on("click",function(e){
 		e.preventDefault();
-		
 		var str="";
 		//li태그에 있는
 		$("#uploadResult ul li").each(function(i,obj){
@@ -36,17 +34,14 @@ $(document).ready(function(){
 		formObj.append(str).submit();
 	})
 	
-	
 	//파일 선택의 내용이 변경되면
 	$("input[type='file']").on("change", function(e){	
-
 		
 //		//가상의 form 태그
 		let formData = new FormData();
 		let inputFile=$("input[name='uploadFile']");
 		let files=inputFile[0].files;
 		console.log(files);
-
 		e.preventDefault();
 		for(let i=0; i<files.length; i++){
 			//파일의 크기가 이상이면
@@ -69,32 +64,18 @@ $(document).ready(function(){
 				alert("upload성공")
 				showUploadedFile(result);
 				//actionForm.submit();
-
 			}
-		
 		})//$.ajax끝
-		
 	})
-
 	var actionForm = $("#actionForm");
-	
 	$("#uploadResult").on("click", "button", function(){
-		
 		console.log("aaa");
-
-		
 		 if (confirm("파일을 삭제하시겠습니까?")) {
 		    var targetLi = $(this).closest("li");
-		    
-		    
 		    targetLi.remove();
-		    
 		 }
 		 actionForm.submit();
 	});
-	
-	
-	
 })//$(document).ready(function(){ 끝
 
 //사용자가 선택한 파일을 원하는 경로에 성공적으로 업로드 한 후 웹브라우저에 파일을 띄워라에 대한 함수 선언(showUploadedFile)

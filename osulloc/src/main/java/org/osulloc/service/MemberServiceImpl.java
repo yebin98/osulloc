@@ -10,13 +10,14 @@ public class MemberServiceImpl  implements MemberService{
 
 	@Autowired
 	private MemberMapper mmapper;
+	
+	//회원가입
 	public void insert(MemberDTO mdto) {
-		
 		mmapper.insert(mdto);
 	}
 	
+	//로그인
 	public MemberDTO login(MemberDTO mdto) {
-		
 		return mmapper.login(mdto);
 		}
 	}

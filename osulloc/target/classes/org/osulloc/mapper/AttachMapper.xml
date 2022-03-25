@@ -4,7 +4,6 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
 <mapper namespace="org.osulloc.mapper.AttachMapper">
-
   	<!-- attach테이블에 insert -->
   	<insert id="insert">
   		insert into attach(uuid,uploadpath,filename,image,bno)
@@ -31,6 +30,4 @@
 		fileCallPath=#{fileCallPath} 
 		where bno=#{bno}
 	</update>
-  	
-
 </mapper>

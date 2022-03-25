@@ -16,16 +16,14 @@ import org.springframework.transaction.annotation.Transactional;
 public class BoardServiceImpl implements BoardService{ 
 	@Autowired
 	private BoardMapper bmapper;
+	
 	@Autowired
 	private AttachMapper amapper;
 	
 	//게시판 글쓰기 설계된 것 구현
 	@Transactional
 	public void write(BoardDTO board) {
-		
-		
 		bmapper.insertSelectKey(board);
-		
 		if(board.getAttachList() != null) {
 			board.getAttachList().forEach(attach->{
 				attach.setBno(board.getBno());
@@ -33,8 +31,7 @@ public class BoardServiceImpl implements BoardService{
 			});
 		}else {
 			System.out.println("사진을 선택하세요.");
-		}
-			
+		}	
 	}
 	
 	//게시판 목록리스트 설계된 것 구현
@@ -50,8 +47,8 @@ public class BoardServiceImpl implements BoardService{
 		return bmapper.detail(board);
 	}
 	
+	//게시판 이전 다음 글
 	public PrevNextDTO detail2(PrevNextDTO pnBoard) {
-
 		return bmapper.detail2(pnBoard);
 	}
 	
@@ -59,19 +56,6 @@ public class BoardServiceImpl implements BoardService{
 	@Transactional
 	public void modify(BoardDTO board) {
 		bmapper.modify(board);
-		
-/*		board.getAttachList().forEach(attach->{
-			// 만약에 파일업로드 정보가 있으면
-			System.out.println(board.getAttachList());
-			if(board.getAttachList() != null) {
-				
-				System.out.println(board.getAttachList());
-				attach.setBno(board.getBno());
-				amapper.modify(attach);
-			}
-			
-			
-		});*/
 	}
 	
 	//게시판 글삭제 설계된 것 구현
@@ -93,16 +77,12 @@ public class BoardServiceImpl implements BoardService{
 		return amapper.fileListPost(bno);
 	}
 
-	
+	//게시판 이미지 삭제
 	public void delete(AttachFileDTO aboard) {
 		 amapper.delete(aboard);
 	}
 
-	
 	public boolean fileDelete(AttachFileDTO attach) {
 		return amapper.fileDelete(attach);
 	}
-
-		
-	
 }

@@ -4,7 +4,14 @@ public class Criteria {
 	private int amount;//한 페이지당 게시물 갯수
 	private String search;//검색종류
 	private String keyword;//검색키워드
+	private int prodnum;
 	
+	public int getProdnum() {
+		return prodnum;
+	}
+	public void setProdnum(int prodnum) {
+		this.prodnum = prodnum;
+	}
 	//기본생성자
 	public Criteria(){
 		this(1,10);//1페이지에 10개
@@ -14,6 +21,13 @@ public class Criteria {
 		this.pageNum=pageNum;
 		this.amount=amount;
 	}
+	
+	//생성자 호출2
+		public Criteria(int pageNum, int amount, int prodnum){
+			this.pageNum=pageNum;
+			this.amount=amount;
+			this.prodnum=prodnum;
+		}
 	
 	public int getPageNum() {
 		return pageNum;
@@ -42,6 +56,13 @@ public class Criteria {
 	@Override
 	public String toString() {
 		return "Criteria [pageNum=" + pageNum + ", amount=" + amount + ", search=" + search + ", keyword=" + keyword
-				+ "]";
+				+ ", prodnum=" + prodnum + "]";
 	}
+	
+//	@Override
+//	public String toString() {
+//		return "Criteria [pageNum=" + pageNum + ", amount=" + amount + ", search=" + search + ", keyword=" + keyword
+//				+ "]";
+//	}
+	
 }

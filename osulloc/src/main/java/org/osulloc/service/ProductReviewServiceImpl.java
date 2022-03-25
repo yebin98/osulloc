@@ -13,7 +13,7 @@ public class ProductReviewServiceImpl implements ProductReviewService{
 	@Autowired
 	private ProductReviewMapper pmapper;
 	
-	//게시판 글쓰기 설계된 것 구현
+	//리뷰 글쓰기 설계된 것 구현
 	public void write(ProductReviewDTO review) {
 		pmapper.insertSelectKey(review);
 	}
@@ -25,8 +25,7 @@ public class ProductReviewServiceImpl implements ProductReviewService{
 	
 	//리뷰 목록리스트 페이징 설계된 것 구현
 	public ArrayList<ProductReviewDTO> productcri(Criteria cri) {
-		
-		System.out.println(pmapper.productcri(cri));
+		System.out.println("system productcri =" + pmapper.productcri(cri));
 		return pmapper.productcri(cri);
 	}
 	
@@ -35,15 +34,13 @@ public class ProductReviewServiceImpl implements ProductReviewService{
 		return pmapper.getTotalCount(cri);
 	}
 	
-	//게시판 수정페이지
+	//리뷰 수정페이지
 	public void modify(ProductReviewDTO review){
 		pmapper.modify(review);
 	};
 		
-	//게시판 삭제페이지
+	//리뷰 삭제페이지
 	public void delete(ProductReviewDTO review) {
 		pmapper.delete(review);
 	}
-	
-	
 }

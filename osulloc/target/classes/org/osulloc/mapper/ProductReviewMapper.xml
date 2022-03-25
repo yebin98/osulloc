@@ -12,8 +12,6 @@
   	
   	<insert id="insertSelectKey" >
   		<selectKey keyProperty="pno" order="BEFORE" resultType="int">
-  			<!-- select max(pno)+1 pno from productreview -->
-  			<!-- select ifnull ( pno, 0 ) from productreview --> 
   			select ifnull (MAX(pno), 0 )+1 from productreview
   		</selectKey>
   		insert into productreview(prodnum,pno,title,content,writer)
@@ -23,7 +21,7 @@
   	<select id="productcri" resultType="org.osulloc.domain.ProductReviewDTO">
   		 select * from(
 				select @rownum:=@rownum+1 as rownum, b.*
-				from (select @rownum:=0) as tmp, productreview as b order by pno desc
+				from (select @rownum:=0) as tmp, productreview as b where prodnum = #{prodnum} order by pno desc 
 				) as productlist 
 		<![CDATA[ 
 			where rownum > (#{pageNum}-1)*#{amount} 
@@ -32,7 +30,7 @@
   	</select>
 
   	<select id="getTotalCount" resultType="int">
-  		select count(*) from productreview
+  		select count(*) from productreview where prodnum = #{prodnum}
   	</select>
   	
   	<select id="productreview" resultType="org.osulloc.domain.ProductReviewDTO">

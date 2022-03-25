@@ -9,7 +9,6 @@ public class ProductReviewDTO {
 	private String content;
 	private String regdate;	
 	private int prodnum;
-	private int good;
 	private ArrayList<AttachFileDTO> attachList;
 	public int getPno() {
 		return pno;
@@ -47,12 +46,6 @@ public class ProductReviewDTO {
 	public void setProdnum(int prodnum) {
 		this.prodnum = prodnum;
 	}
-	public int getGood() {
-		return good;
-	}
-	public void setGood(int good) {
-		this.good = good;
-	}
 	public ArrayList<AttachFileDTO> getAttachList() {
 		return attachList;
 	}
@@ -62,7 +55,7 @@ public class ProductReviewDTO {
 	@Override
 	public String toString() {
 		return "ProductReviewDTO [pno=" + pno + ", writer=" + writer + ", title=" + title + ", content=" + content
-				+ ", regdate=" + regdate + ", prodnum=" + prodnum + ", good=" + good + ", attachList=" + attachList
+				+ ", regdate=" + regdate + ", prodnum=" + prodnum + ", attachList=" + attachList
 				+ "]";
 	}
 	

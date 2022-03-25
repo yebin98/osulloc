@@ -20,38 +20,32 @@ public class MainController {
 	
 	@GetMapping("mainpage")
 	public void mainpage(Model model, ProductDTO prod) {
+		//선택상품
 		model.addAttribute("product", service.product(prod));
-		model.addAttribute("product2", service.product2(prod));
-
-		
 		System.out.println("maincontroller1="+service.product(prod));
+		
+		//세일상품
+		model.addAttribute("product2", service.product2(prod));
 		System.out.println("maincontroller2="+service.product2(prod));
 	}
 	
-	@PostMapping("mainpage")
-	public String mainpagePost(ProductDTO prod) {
-
-		service.product3in(prod);
-		
-		System.out.println("장바구니에 담겼습니다.");
-		
-		return "redirect:/page/cartPage";
-
-	}
-	
-	
-	@GetMapping("cartPage")
-	public void cartpagePost(Model model, ProductDTO prod) {
-		
-		model.addAttribute("product3", service.product3se(prod));
-
-	}
-
-	
+	//매거진
 	@GetMapping("subpage")
 	public void subpage() {
 	}
 	
+	//장바구니
+	@GetMapping("cartPage")
+	public void cartpagePost(Model model, ProductDTO prod) {
+		model.addAttribute("product3", service.product3se(prod));
+	}
+	
+	@PostMapping("mainpage")
+	public String mainpagePost(ProductDTO prod) {
+		service.product3in(prod);
+		System.out.println("장바구니에 담겼습니다.");
+		return "redirect:/page/cartPage";
+	}
 
 }
 

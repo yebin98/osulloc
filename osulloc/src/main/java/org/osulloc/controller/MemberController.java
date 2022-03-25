@@ -19,47 +19,38 @@ public class MemberController {
 	@Autowired
 	private MemberService mservice;
 	
+	//È¸¿ø°¡ÀÔ
 	@GetMapping("member")
 	public void write() {
 		System.out.println("member/member");
 	} 
+	
 	@PostMapping("member")
-	public void Postmember(MemberDTO mdto) {
-
+	public String Postmember(MemberDTO mdto) {
 		mservice.insert(mdto);
+		return "redirect:/member/login";
 	}
 	
-	//æ¿¡ì’“ë ‡ï¿½ì”¤ ï¿½ì†•ï§Žï¿½ ï¿½ì” ï¿½ë£ž 
+	//·Î±×ÀÎ
 	@GetMapping("login")
 	public void login() {
 		System.out.println("member/login");
 	} 
 
-	
 	@PostMapping("login")
 	public String Postlogin(MemberDTO mdto,HttpSession session) {
 		MemberDTO login=mservice.login(mdto);
-		
-
 		session.setAttribute("login", login);
-		
 		if(session.getAttribute("login")!=null) {
-			
 			return "redirect:/page/mainpage";
-			
 		}else {
-			
 			return "redirect:/member/member";
 		}
 	}
 
-		@RequestMapping(value = "/logout", method = RequestMethod.GET)
-		public String logout(HttpSession session) throws Exception{
-			
-			session.invalidate();
-			
-			return "redirect:/page/mainpage";
-		}
-
-		    }
-
+	@RequestMapping(value = "/logout", method = RequestMethod.GET)
+	public String logout(HttpSession session) throws Exception{
+		session.invalidate();
+		return "redirect:/page/mainpage";
+	}
+	    }

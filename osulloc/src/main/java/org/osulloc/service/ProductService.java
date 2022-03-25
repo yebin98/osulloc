@@ -13,16 +13,16 @@ public interface ProductService {
 	//技老惑前
 	public ArrayList<ProductDTO> product2(ProductDTO prod);
 	
+	//力前 殿废
+	public void addProduct(ProductDTO product);
+	
+	//力前 惑技其捞瘤 select
+	public ProductDTO productse(ProductDTO prod);
+
 	//厘官备聪 select
 	public ArrayList<ProductDTO> product3se(ProductDTO prod);
 
 	//厘官备聪 insert
 	public void product3in(ProductDTO prod);
-	
-	//力前 惑技其捞瘤 select
-	public ProductDTO productse(ProductDTO prod);
-	
-	public void addProduct(ProductDTO product);
-
 
 }

@@ -26,7 +26,6 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 public class ProductReviewController {
 	@Autowired
 	private ProductReviewService pservice;
-	
 	@Autowired
 	private ProductService service;
 
@@ -39,48 +38,28 @@ public class ProductReviewController {
 	//글쓰기 버튼을 클릭하면
 	@PostMapping("reviewWrite")
 	public String reviewWritePost(ProductReviewDTO review) {
-		System.out.println("getprod1=" + review);
-		System.out.println("getprod2=" + review.getProdnum());
+		System.out.println("getprod=" + review.getProdnum());
 		pservice.write(review);
-		
-		
 		return "redirect:/page/detailProduct?prodnum="+review.getProdnum();
 	}
 	
 	@GetMapping("detailProduct")
 	public void detailProduct(Model model, Criteria cri, ProductDTO prod) {
-		
-
 		System.out.println(prod);
-		
 		model.addAttribute("productse", service.productse(prod));
-
-		
 		//리뷰
 		int pagenum = cri.getPageNum();
-		
-		cri = new Criteria(pagenum,5);
-		
-		System.out.println("prodnum=" + pservice.productcri(cri));
+		int prodnum = cri.getProdnum();
+		cri = new Criteria(pagenum,5, prodnum);
 		model.addAttribute("productcri", pservice.productcri(cri));
-
-		
 		int total = pservice.getTotalCount(cri);
-		model.addAttribute("pageMaker", new PageDTO(cri, pservice.getTotalCount(cri)));
-		
-		
+		model.addAttribute("pageMaker", new PageDTO(cri, total));
 	}
 
-	
 	@PostMapping("detailProduct")
 	public String detailProductPost(ProductDTO prod) {
-		
-		System.out.println("장바구니목록=" + prod );
-		
 		service.product3in(prod);
-		
 		System.out.println("장바구니에 담겼습니다.");
-		
 		return "redirect:/page/cartPage";
 	}
 	
@@ -89,20 +68,15 @@ public class ProductReviewController {
 	public void reviewModify(ProductReviewDTO review, Model model, ProductDTO prod) {		
 		System.out.println("pno="+review.getPno());
 		model.addAttribute("pno", review.getPno());
-		
 		model.addAttribute("productse", service.productse(prod));
 		model.addAttribute("productreview", pservice.productreview(review));
-		
 	}
 	
 	//글수정 버튼을 클릭하면
 	@PostMapping("reviewModify")
 	public String reviewModifyPost(ProductReviewDTO review) {
-		
 		pservice.modify(review);
-	
 		System.out.println("reviewModify 수정이 완료됨");
-		
 		return "redirect:/page/detailProduct?prodnum="+review.getProdnum();
 	}
 	
@@ -110,7 +84,6 @@ public class ProductReviewController {
 	@GetMapping("reviewdelete")
 	public String reviewdelete(ProductReviewDTO review) {
 		pservice.delete(review);
-		
 		return "redirect:/page/detailProduct?prodnum="+review.getProdnum();
 	}
 }

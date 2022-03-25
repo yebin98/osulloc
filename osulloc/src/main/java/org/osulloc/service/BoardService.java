@@ -17,6 +17,7 @@ public interface BoardService {
 	//게시판 목록리스트에서 제목을 클릭했을 때 내용이 나오는 상세페이지
 	public BoardDTO detail(BoardDTO board);
 	
+	//게시판 이전 다음 글
 	public PrevNextDTO detail2(PrevNextDTO pnBoard);
 	
 	//게시판 수정페이지
@@ -30,13 +31,10 @@ public interface BoardService {
 	
 	//게시판 상세페이지에 파일업로드된 이미지 출력
 	public ArrayList<AttachFileDTO> fileList(int bno);
-	
 	public ArrayList<AttachFileDTO> fileListPost(int bno);
 	
-
+	//게시판 이미지 삭제
 	public void delete(AttachFileDTO aboard);
-
-	
 	public boolean fileDelete(AttachFileDTO attach);
 
 

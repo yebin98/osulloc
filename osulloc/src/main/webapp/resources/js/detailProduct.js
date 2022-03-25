@@ -188,76 +188,59 @@ $(document).ready(function(){
 	
 	//댓글목록리스트
 	function showList(pno){
-		
 		ReplyReviewService.getList({pno:pno},function(list){
-		
 			var str="";
-			
 			for(var i=0; i<list.length; i++){		
-				
 				str+= "<li class = 'relist_in' data-rno='"+list[i].rno+"'><div style='display : none'><b>" + list[i].rno + "</b></div><div class = 'listReplyer'><b>" + list[i].replyer + "</b></div>" 
 				str+= "<div class = 'listReply'><div>" + list[i].reply + "</div><button type='button' id='menu' data-rno='"+list[i].rno+"' data-pno='"+list[i].pno+"' >수정</button></div>"
 				str+= "</li>"	
 			}
-			
 			$("#relist"+pno).html(str);
-			
 		});
 	}
-	
-	//댓글쓰기를 눌렸을 때
-	
-	$(document).on("click","#replyRegisterBtn",function(){
 
+	//댓글쓰기를 눌렸을 때
+	$(document).on("click","#replyRegisterBtn",function(){
 		$("#rewrite"+pno).show();
-		
 		//사용자가 입력한 댓글내용을 저장
 		let reply = $("textarea[id=reply"+pno+"]").val()
-		
 		console.log(reply);
 		
 		//사용자가 입력한 댓글작성자를 저장
-		
 		let replyer = $("input[id=replyer"+pno+"]").val();
 		
 		//ajax로 보내고자하는 json 타입 
 		ReplyReviewService.add({replyer:replyer,reply:reply,pno:pno,rno: $("input[name='rno']").val()}, 
-			
+		
 		// callback(익명함수) 함수호출
 		function(result){
-	
 			alert("insert 작업 : " + result)
-			
 			//목록리스트를 처리
 			showList(pno);
-			
 		});
-			
-			
 		$("input[name='replyer']").val("");
 		$("textarea[name='reply']").val("");
-			
 	})
 	
 	//select버튼을 클릭하면
 	$(document).on("click","#menu", function(){
-		
 		//rno값 가져오기
 		var rno = $(this).data("rno");
 		console.log(rno)
-
-		var reply = {/*pno: pno,*/ rno: rno ,reply:$("input[name='reply']").val()}
 		
+		var reply = {rno: rno ,reply:$("input[name='reply']").val()}
 		ReplyReviewService.reDetail(rno,function(detail){
-
+			
 			$("#rewrite" + pno).find("input[name='rno']").val(detail.rno)
 			$("#rewrite" + pno).find("input[name='replyer']").val(detail.replyer)
 			$("#rewrite" + pno).find("textarea[name='reply']").val(detail.reply)
 			
 			//상세페이지가 실행되면 댓글 글쓰기 버튼 활성화
 			$("#rewrite"+pno).find("#replyRegisterBtn").hide();
+			
 			//상세페이지가 실행되면 댓글 글수정 버튼 활성화
 			$("#rewrite"+pno).find("#replyModBtn").show();
+			
 			//상세페이지가 실행되면 댓글 글삭제 버튼 활성화
 			$("#rewrite"+pno).find("#replyRemoveBtn").show();			
 		})
@@ -329,4 +312,3 @@ $(document).ready(function(){
 	})
 	
 });
-

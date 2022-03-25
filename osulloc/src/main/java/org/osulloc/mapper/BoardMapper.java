@@ -17,10 +17,10 @@ public interface BoardMapper {
 	//게시판 목록리스트와 관련되어있는 DB작업에 대한 설계
 	public ArrayList<BoardDTO> noticeBoard(Criteria cri);
 
-
 	//게시판 목록리스트에서 제목을 클릭했을 때 내용이 나오는 상세페이지와 관련되어있는 DB작업에 대한 설계
 	public BoardDTO detail(BoardDTO board);
 	
+	//게시판 이전 다음 글
 	public PrevNextDTO detail2(PrevNextDTO pnBoard);
 	
 	//게시판 목록리스트에서 제목을 클릭했을 때 조회수 +1 을 할 수 있는 DB작업에 대한 설계
